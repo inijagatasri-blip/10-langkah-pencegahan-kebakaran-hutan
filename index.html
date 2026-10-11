@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pelajari 10 langkah nyata mencegah kebakaran hutan demi menjaga lingkungan dan masa depan.">
+  <title>Jagat asri | Cegah Kebakaran</title>
+
+  <style>
+    :root {
+      --hijau: #205c3b;
+      --hijau-muda: #eaf4e9;
+      --aksen: #f2b84b;
+      --teks: #26352c;
+      --putih: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--teks);
+      background: #f8faf7;
+    }
+
+    header {
+      background: var(--hijau);
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--aksen);
+    }
+
+    .hero {
+      min-height: 440px;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(12, 43, 27, .92),
+        rgba(12, 43, 27, .45)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .label {
+      color: var(--aksen);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: var(--aksen);
+      color: #243328;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: transform .2s, opacity .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: .9;
+    }
+
+    section {
+      padding: 70px 8%;
+      scroll-margin-top: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    .section-title h2 {
+      color: var(--hijau);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .intro {
+      background: var(--hijau-muda);
+    }
+
+    .intro-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .intro-content p {
+      margin-bottom: 14px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .step-card {
+      display: flex;
+      gap: 16px;
+      padding: 24px;
+      background: white;
+      border: 1px solid #e2e9e0;
+      border-radius: 14px;
+      box-shadow: 0 5px 18px rgba(25, 60, 35, .05);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 9px 24px rgba(25, 60, 35, .1);
+    }
+
+    .number {
+      flex-shrink: 0;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--hijau-muda);
+      color: var(--hijau);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .step-card h3 {
+      color: var(--hijau);
+      margin-bottom: 7px;
+      font-size: 1.08rem;
+    }
+
+    .step-card p {
+      font-size: .96rem;
+    }
+
+    .cta {
+      background: var(--hijau);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .note {
+      max-width: 760px;
+      margin: 28px auto 0;
+      font-size: .9rem;
+      color: #e0eee3;
+    }
+
+    footer {
+      background: #153d28;
+      color: white;
+      padding: 25px 8%;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    footer p + p {
+      margin-top: 5px;
+      color: #cbdccf;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: 400px;
+        padding: 65px 6%;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .step-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGASI -->
+  <header>
+    <div class="logo">🌿 Jagat Asri</div>
+    <nav aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Mengapa Penting?</a>
+      <a href="#langkah">10 Langkah</a>
+      <a href="#aksi">Ayo Bertindak</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+      <div class="hero-content">
+        <span class="label">Edukasi Lingkungan</span>
+        <h1>10 Langkah Nyata Mencegah Kebakaran Hutan</h1>
+        <p>
+          Hutan adalah sumber kehidupan. Lindungi pohon, satwa,
+          udara, dan masa depan kita dengan tindakan sederhana
+          yang bisa dimulai hari ini.
+        </p>
+        <a href="#langkah" class="btn">Pelajari Langkahnya ↓</a>
+      </div>
+    </section>
+
+    <!-- PENGANTAR -->
+    <section class="intro" id="tentang">
+      <div class="intro-content">
+        <div class="section-title">
+          <h2>Mengapa Pencegahan Itu Penting?</h2>
+        </div>
+
+        <p>
+          Kebakaran hutan dapat merusak ekosistem, membunuh satwa,
+          menghancurkan habitat, dan menyebabkan polusi udara.
+          Asapnya juga dapat mengganggu kesehatan serta aktivitas
+          masyarakat.
+        </p>
+
+        <p>
+          Kebakaran bisa meluas dengan cepat, terutama saat cuaca
+          kering dan angin kencang. Banyak kebakaran dipicu oleh
+          aktivitas manusia yang sebenarnya dapat dicegah.
+        </p>
+
+        <p>
+          <strong>
+            Jangan menunggu bencana terjadi. Mulailah dari diri
+            sendiri, keluarga, dan lingkungan sekitar.
+          </strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- 10 LANGKAH PENCEGAHAN -->
+    <section id="langkah">
+      <div class="section-title">
+        <h2>10 Langkah Nyata Mencegah Kebakaran Hutan</h2>
+        <p>
+          Tindakan kecil hari ini dapat melindungi hutan untuk
+          generasi mendatang. Berikut langkah yang bisa kita lakukan.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step-card">
+          <div class="number">01</div>
+          <div>
+            <h3>Jangan Membakar Lahan</h3>
+            <p>
+              Hindari membuka lahan dengan api. Gunakan cara yang
+              lebih aman dan sesuai aturan setempat.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">02</div>
+          <div>
+            <h3>Jangan Membuang Puntung Rokok Sembarangan</h3>
+            <p>
+              Pastikan puntung rokok benar-benar padam. Jangan
+              membuangnya ke semak atau area hutan yang kering.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">03</div>
+          <div>
+            <h3>Gunakan Api Unggun dengan Bijak</h3>
+            <p>
+              Patuhi larangan menyalakan api. Jika diizinkan,
+              pilih tempat aman dan padamkan api sepenuhnya
+              sebelum pergi.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">04</div>
+          <div>
+            <h3>Jangan Membakar Sampah di Area Rawan</h3>
+            <p>
+              Hindari membakar sampah, terutama saat cuaca kering
+              atau angin kencang. Pilih cara pengelolaan sampah
+              yang lebih aman.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">05</div>
+          <div>
+            <h3>Segera Laporkan Tanda Kebakaran</h3>
+            <p>
+              Jika melihat asap atau titik api, segera laporkan
+              lokasi dan kondisi kepada petugas. Jangan menunggu
+              api membesar.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">06</div>
+          <div>
+            <h3>Jauhkan Sumber Api dari Hutan</h3>
+            <p>
+              Jangan meninggalkan korek api, bara, atau bahan
+              mudah terbakar sembarangan. Periksa kembali area
+              sebelum meninggalkannya.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">07</div>
+          <div>
+            <h3>Tingkatkan Kesadaran Masyarakat</h3>
+            <p>
+              Ajak keluarga, teman, dan warga memahami bahaya
+              kebakaran hutan serta cara mencegahnya.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">08</div>
+          <div>
+            <h3>Jaga Lingkungan Tetap Bersih</h3>
+            <p>
+              Kelola sampah dengan benar dan hindari meninggalkan
+              bahan yang dapat memicu kebakaran di kawasan hutan.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">09</div>
+          <div>
+            <h3>Patuhi Aturan di Kawasan Hutan</h3>
+            <p>
+              Ikuti petunjuk petugas, larangan menyalakan api,
+              dan aturan keselamatan saat memasuki kawasan hutan.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="number">10</div>
+          <div>
+            <h3>Ikut Menjaga dan Mengawasi Hutan</h3>
+            <p>
+              Dukung kegiatan pelestarian, pengawasan lingkungan,
+              dan upaya pencegahan kebakaran bersama masyarakat.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta" id="aksi">
+      <h2>Hutan Terjaga, Masa Depan Terpelihara!</h2>
+      <p>
+        Kepedulianmu berarti. Bagikan informasi ini kepada orang
+        terdekat dan bantu cegah kebakaran sebelum terlambat.
+        Jika melihat titik api, segera hubungi petugas berwenang.
+      </p>
+
+      <div class="cta-actions">
+        <button class="btn" id="shareBtn" type="button">
+          ↗ Bagikan Informasi
+        </button>
+
+        <a
+          class="btn btn-outline"
+          href="https://www.bmkg.go.id/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Informasi Cuaca BMKG
+        </a>
+      </div>
+
+      <p class="note">
+        Keselamatan adalah prioritas. Jangan mendekati atau
+        mencoba memadamkan kebakaran besar sendirian. Menjauhlah
+        ke tempat aman dan laporkan kepada petugas pemadam,
+        BPBD, atau aparat setempat.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>🌿 Jaga Hutan, Jaga Kehidupan</strong></p>
+    <p>
+      Mulai dari langkah kecil, untuk bumi yang lebih baik.
+    </p>
+    <p>© <span id="year"></span> Edukasi Lingkungan.</p>
+  </footer>
+
+  <script>
+    // Tahun footer otomatis
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Tombol berbagi informasi
+    document.getElementById("shareBtn").addEventListener(
+      "click",
+      async function () {
+        const shareData = {
+          title: "10 Langkah Nyata Mencegah Kebakaran Hutan",
+          text:
+            "Ayo lindungi hutan! Pelajari 10 langkah nyata " +
+            "mencegah kebakaran hutan dan bagikan kepada orang lain.",
+          url: window.location.href
+        };
+
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else if (navigator.clipboard) {
+            await navigator.clipboard.writeText(
+              shareData.text + "\n" + shareData.url
+            );
+            alert("Informasi berhasil disalin. Ayo bagikan!");
+          } else {
+            alert(
+              "Salin alamat website ini dan bagikan kepada temanmu."
+            );
+          }
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            alert("Silakan salin alamat website dan bagikan.");
+          }
+        }
+      }
+    );
+  </script>
+</body>
+</html>
